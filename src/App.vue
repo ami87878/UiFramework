@@ -7,7 +7,7 @@
             Application
           </v-list-item-title>
           <v-list-item-subtitle>
-            subtext
+            Content for App
           </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
@@ -37,7 +37,7 @@
     <v-app-bar app>
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-toolbar-title>Application</v-toolbar-title>
+      <v-toolbar-title>Action App</v-toolbar-title>
     </v-app-bar>
 
     <v-main>
@@ -48,6 +48,16 @@
 
 <script>
   export default {
-    data: () => ({ drawer: null }),
+    data: () => ({ 
+      drawer: null,
+      items: [
+          { title: 'To Do', icon: 'mdi-view-dashboard' },
+          { title: 'Photos', icon: 'mdi-image' },
+          { title: 'About', icon: 'mdi-help-box' },
+          { title: 'Account', icon: 'mdi-account' },
+          { title: 'Home', icon: 'mdi-home' },
+        ],
+    
+    })
   }
 </script>
